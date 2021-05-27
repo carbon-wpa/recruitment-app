@@ -1,0 +1,10 @@
+<div class="main">
+  <div class="main-row">
+    <div></div>
+    <div class="menu">
+      <ng-container *ngFor="let menuItem of menuItems">
+        <span class="menu-item"><a [href]="menuItem.url">{{menuItem.name}}</a></span>
+      </ng-container>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+@mixin font-title() {
+  font-family: 'Arial';
+  font-weight: bold;
+  font-size: 72px;
+  line-height: 72px;
+}
+
+@mixin font-subtitle() {
+  font-family: 'Arial';
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 60px;
+}
+
+@mixin font-caption() {
+  font-family: 'Arial';
+  font-weight: bold;
+  font-style: italic;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+@mixin font-regular() {
+  font-family: 'Arial';
+  font-size: 14px;
+  line-height: 14px;
+}

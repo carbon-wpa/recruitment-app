@@ -1,0 +1,21 @@
+@import "_colors";
+@import "_fonts";
+
+.isOdd {
+  background-color: $color-primary;
+  color: $color-background;
+}
+
+.title {
+  @include font-caption();
+  padding: 15px 0;
+}
+
+.tags {
+  padding: 15px 0;
+  color: $color-grey;
+
+  span:not(:first-child) {
+    margin-left: 15px;
+  }
+}

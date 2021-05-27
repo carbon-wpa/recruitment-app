@@ -1,0 +1,24 @@
+<div class="main" [class.isOdd]="isOdd">
+  <div class="main-row">
+    <div></div>
+    <div class="title">
+      {{postItem.title}}
+    </div>
+  </div>
+  <div class="main-row">
+    <div>
+
+    </div>
+    <div>
+      {{postItem.description}}
+    </div>
+  </div>
+  <div class="main-row">
+    <div></div>
+    <div class="tags">
+      <ng-container *ngFor="let tag of postItem?.tags">
+        <span>#{{tag}}</span>
+      </ng-container>
+    </div>
+  </div>
+</div>

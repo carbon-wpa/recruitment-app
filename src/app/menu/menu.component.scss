@@ -1,0 +1,21 @@
+@import "_fonts";
+@import "_colors";
+
+.menu {
+  padding: 40px 0;
+
+  &-item {
+    @include font-regular();
+    text-transform: uppercase;
+
+    a {
+      text-decoration: none;
+      cursor: pointer;
+      color: $color-black;
+    }
+  }
+
+  &-item:not(:first-child) {
+    margin-left: 75px;
+  }
+}
