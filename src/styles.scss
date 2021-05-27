@@ -22,11 +22,11 @@ h2 {
   &-row {
     display: flex;
 
-    div {
+    > div {
       margin-right: 20px;
     }
 
-    div:nth-child(odd){
+    > div:nth-child(odd){
       min-width: 185px;
     }
   }

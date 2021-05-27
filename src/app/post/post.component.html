@@ -1,4 +1,4 @@
-<div class="main" [class.isOdd]="isOdd">
+<div class="main" [class.reverse]="isOdd">
   <div class="main-row">
     <div></div>
     <div class="title">
@@ -6,9 +6,11 @@
     </div>
   </div>
   <div class="main-row">
-    <div>
-
-    </div>
+      <div class="vote">
+        <div class="vote-up" (click)="voteUp()" [class.vote-disabled]="postItem.points === MAX_VOTING_NUMBER"></div>
+        <div class="vote-number">{{postItem.points}}</div>
+        <div class="vote-down" (click)="voteDown()" [class.vote-disabled]="postItem.points === MIN_VOTING_NUMBER"></div>
+      </div>
     <div>
       {{postItem.description}}
     </div>

@@ -1,8 +1,11 @@
-<app-header></app-header>
-<app-menu></app-menu>
-<ng-container *ngFor="let postItem of postItems; let i = index">
-  <app-post [postItem]="postItem" [isOdd]="i % 2"></app-post>
-</ng-container>
+<div class="container">
+  <app-header></app-header>
+  <app-menu></app-menu>
+  <ng-container *ngFor="let postItem of postItems; let i = index">
+    <app-post [postItem]="postItem" [isOdd]="i % 2"></app-post>
+  </ng-container>
+  <app-footer></app-footer>
+</div>
 
 
 

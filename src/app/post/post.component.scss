@@ -1,14 +1,45 @@
 @import "_colors";
 @import "_fonts";
 
-.isOdd {
-  background-color: $color-primary;
-  color: $color-background;
-}
+$thumb-icon-size: 32px;
 
 .title {
   @include font-caption();
   padding: 15px 0;
+}
+
+@mixin vote-core($x, $y) {
+  height: $thumb-icon-size;
+  width: $thumb-icon-size;
+  background: url('../../assets/thumbs.png') $x $y;
+  cursor: pointer;
+}
+
+.vote {
+  @include font-caption();
+  display: flex;
+  align-items: center;
+  height: $thumb-icon-size;
+
+  &-up {
+    @include vote-core($thumb-icon-size, 0);
+    margin-right: 8px;
+    margin-left: auto;
+  }
+
+  &-number {
+    min-width: 18px;
+    text-align: center;
+  }
+
+  &-down {
+    @include vote-core(0, 0);
+    margin-left: 8px;
+  }
+
+  &-disabled {
+    cursor: not-allowed;
+  }
 }
 
 .tags {
@@ -17,5 +48,24 @@
 
   span:not(:first-child) {
     margin-left: 15px;
+  }
+}
+
+.reverse {
+  background-color: $color-primary;
+  color: $color-background;
+
+  .vote {
+    &-up {
+      @include vote-core($thumb-icon-size, $thumb-icon-size);
+    }
+
+    &-down {
+      @include vote-core(0, $thumb-icon-size);
+    }
+
+    &-disabled {
+      cursor: not-allowed;
+    }
   }
 }
